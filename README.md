@@ -23,12 +23,9 @@ If it doesn’t break boundaries, I’m not interested.
 
 ## 🔥 Projects That’ll Make You Say “WTF”
 
-- **Xyradix** — An AI-based alternative to the toxic academic system  
-- **Alien OS** — A mobile AI-powered OS built from scratch  
-- **Alien Paani** — Smart clay bottles + AI for hydration in India & Nepal  
+- **KainOS** — A mobile AI-powered OS built from scratch  
 - **Pariksha Plugin** — Conduct live exams directly from your site  
 - **EOE (Echoes of Engineers)** — Share student confessions anonymously  
-- **NepalOS** — An OS designed for freedom, not surveillance  
 - **Alien Sutra** — My YouTube channel of code, chaos, and clarity
 
 ---
