@@ -1,502 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Manik Shrivastav — AI & Systems Developer, software builder, and low-level programming enthusiast." />
-  <title>Manik Shrivastav — Alien</title>
-  <style>
-    :root {
-      --bg: #0b1020;
-      --card: #11182b;
-      --card-2: #0e1526;
-      --text: #e8eefc;
-      --muted: #9aa8c7;
-      --accent: #70a5fd;
-      --accent-2: #bf91f3;
-      --border: #24314d;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(112,165,253,.13), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(191,145,243,.10), transparent 25%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1100px, calc(100% - 32px));
-      margin: auto;
-    }
-
-    header {
-      min-height: 92vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 70px 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 14px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      color: var(--accent);
-      background: rgba(112,165,253,.06);
-      font-size: .85rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 20px 0 8px;
-      font-size: clamp(3rem, 9vw, 6.5rem);
-      line-height: .95;
-      letter-spacing: -.06em;
-    }
-
-    .alias {
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .typing {
-      min-height: 34px;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      margin: 24px auto;
-    }
-
-    .cursor {
-      border-right: 2px solid var(--accent);
-      animation: blink .8s step-end infinite;
-    }
-
-    @keyframes blink { 50% { border-color: transparent; } }
-
-    .intro {
-      max-width: 760px;
-      margin: 0 auto 30px;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      padding: 11px 18px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      transition: .2s ease;
-      font-weight: 700;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    section { padding: 80px 0; }
-
-    .section-title {
-      font-size: 2rem;
-      margin: 0 0 10px;
-      letter-spacing: -.03em;
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      margin: 0 0 28px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      background: linear-gradient(145deg, var(--card), var(--card-2));
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      height: 100%;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .card p { color: var(--muted); }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-    }
-
-    .tag {
-      padding: 7px 11px;
-      border-radius: 8px;
-      background: #18233b;
-      border: 1px solid var(--border);
-      color: #cbd7ef;
-      font-size: .9rem;
-    }
-
-    .project {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .project .links {
-      margin-top: auto;
-      padding-top: 12px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .stat {
-      text-align: center;
-      padding: 28px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 2rem;
-      color: var(--accent);
-    }
-
-    .contact {
-      text-align: center;
-      padding: 70px 20px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: linear-gradient(145deg, var(--card), var(--card-2));
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0 60px;
-      color: var(--muted);
-    }
-
-    .alien {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 800px) {
-      .grid, .stats { grid-template-columns: 1fr; }
-      header { min-height: 80vh; }
-      section { padding: 55px 0; }
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <span class="eyebrow">AI • Systems • Software • Low Level</span>
-
-      <h1>Hey 👋, I'm <span class="alias">Manik</span></h1>
-      <h2>aka <span class="alias">Alien</span></h2>
-
-      <div class="typing">
-        <span id="typingText" class="cursor"></span>
-      </div>
-
-      <p class="intro">
-        I build software and systems with a strong interest in AI, programming,
-        operating systems, developer tools, hardware, and unconventional ideas.
-        I enjoy going from low-level concepts to practical products that solve
-        real problems.
-      </p>
-
-      <div class="buttons">
-        <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        <a class="btn" href="https://www.youtube.com/" target="_blank">YouTube</a>
-        <a class="btn" href="mailto:manikshrivastav163@gmail.com">Email</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <section id="about">
-      <h2 class="section-title">🧠 About Me</h2>
-      <p class="section-subtitle">
-        A builder-oriented profile based on the information represented in the
-        provided GitHub profile and README reference.
-      </p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>⚙️ Systems</h3>
-          <p>
-            Interested in low-level programming, Linux, CLI tools, operating
-            systems, and understanding how software works beneath the surface.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>🤖 AI</h3>
-          <p>
-            Exploring Python, LLMs, and AI-driven software with an emphasis on
-            turning ideas into usable systems.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>🚀 Building</h3>
-          <p>
-            I like experimenting, shipping projects, learning by building, and
-            creating technology that reflects my own approach.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="stack">
-      <h2 class="section-title">🛠️ Tech Stack</h2>
-      <p class="section-subtitle">Technologies represented in the source profile.</p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>👨‍💻 Languages</h3>
-          <div class="tags">
-            <span class="tag">C</span>
-            <span class="tag">Assembly</span>
-            <span class="tag">Python</span>
-            <span class="tag">Java</span>
-            <span class="tag">PHP</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>🤖 AI / ML</h3>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">LLMs</span>
-            <span class="tag">AI Engineering</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>🐧 Systems & Hardware</h3>
-          <div class="tags">
-            <span class="tag">Linux</span>
-            <span class="tag">Linux CLI</span>
-            <span class="tag">Operating Systems</span>
-            <span class="tag">Arduino</span>
-            <span class="tag">Low-Level Programming</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2 class="section-title">🚀 Featured Projects</h2>
-      <p class="section-subtitle">
-        Projects currently represented on the GitHub profile.
-      </p>
-
-      <div class="grid">
-        <article class="card project">
-          <h3>🔧 KainOS</h3>
-          <p>
-            An operating-system-oriented project representing the systems and
-            low-level side of the profile.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project">
-          <h3>📝 Pariksha Plugin</h3>
-          <p>
-            A project from the GitHub profile focused on the Pariksha/plugin
-            ecosystem.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project">
-          <h3>🌐 EOE</h3>
-          <p>
-            One of the highlighted projects represented on the profile.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project">
-          <h3>👽 Alien Sutra</h3>
-          <p>
-            A project connected with the Alien identity and creative/technical
-            work represented in the profile.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project">
-          <h3>🖱️ MousePad</h3>
-          <p>
-            Another repository represented among the profile's projects.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="card project">
-          <h3>📓 MuktiNote</h3>
-          <p>
-            A repository from the profile's broader project collection.
-          </p>
-          <div class="links">
-            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="github">
-      <h2 class="section-title">📊 GitHub</h2>
-      <p class="section-subtitle">
-        Profile information currently represented on GitHub.
-      </p>
-
-      <div class="stats">
-        <div class="stat">
-          <strong>20+</strong>
-          Repositories
-        </div>
-        <div class="stat">
-          <strong>11</strong>
-          Followers
-        </div>
-        <div class="stat">
-          <strong>9</strong>
-          Following
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:18px;">
-        <h3>🔗 Explore Everything</h3>
-        <p>
-          Browse repositories, projects, experiments, and contributions directly
-          from the GitHub profile.
-        </p>
-        <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">
-          Open GitHub Profile
-        </a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="contact">
-        <div class="alien">👽</div>
-        <h2 class="section-title">Let's Build Something Interesting</h2>
-        <p class="section-subtitle">
-          Have an idea, project, experiment, or technical problem?
-          Let's connect.
-        </p>
-
-        <div class="buttons">
-          <a class="btn" href="mailto:manikshrivastav163@gmail.com">Email Me</a>
-          <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>👽 Built by Manik Shrivastav · aka Alien</p>
-      <p>Code. Experiment. Build. Repeat.</p>
-    </div>
-  </footer>
-
-  <script>
-    const roles = [
-      "AI / Software Developer",
-      "Systems & Low-Level Programming Enthusiast",
-      "Python & LLM Explorer",
-      "Linux / CLI Builder",
-      "Hardware & Arduino Enthusiast",
-      "Building unconventional things 👽"
-    ];
-
-    const element = document.getElementById("typingText");
-    let roleIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function type() {
-      const role = roles[roleIndex];
-
-      if (!deleting) {
-        element.textContent = role.slice(0, charIndex++);
-        if (charIndex > role.length) {
-          deleting = true;
-          setTimeout(type, 1300);
-          return;
-        }
-      } else {
-        element.textContent = role.slice(0, charIndex--);
-        if (charIndex < 0) {
-          deleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-          charIndex = 0;
-        }
-      }
-
-      setTimeout(type, deleting ? 45 : 75);
-    }
-
-    type();
-  </script>
-</body>
-</html>
+<div align="center">
+
+# Hey 👋, I'm Manik Shrivastav!
+
+### 👽 **Alien — Building Beyond the Ordinary**
+
+I'm a developer exploring the intersection of
+**AI, software, systems, low-level programming, Linux, hardware and experimental technology.**
+I like understanding how things work — and then building them myself.
+
+</div>
+
+---
+
+<!-- Animated Typing SVG -->
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=AI+%2F+LLM+Developer;Systems+%26+Low-Level+Programmer;Software+Developer;Linux+%26+CLI+Builder;Hardware+%26+Arduino+Enthusiast;Building+Unconventional+Things+%F0%9F%91%BD&font=Fira+Code&center=true&width=650&height=45&color=70a5fd&vCenter=true&pause=1000&size=20" />
+</p>
+
+<!-- Social Links -->
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav">
+  <img src="https://img.shields.io/badge/GitHub-ManikShrivastav-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="mailto:manikshrivastav163@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+
+<a href="https://www.youtube.com/@AlienSutra">
+  <img src="https://img.shields.io/badge/YouTube-Alien%20Sutra-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+</a>
+
+</p>
+
+<!-- Dynamic GitHub Badges -->
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav?tab=followers">
+  <img
+    alt="followers"
+    title="Follow me on GitHub"
+    src="https://custom-icon-badges.demolab.com/github/followers/ManikShrivastav?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Followers&logoColor=white"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav?tab=repositories&sort=stargazers">
+  <img
+    alt="total stars"
+    title="Total stars on GitHub"
+    src="https://custom-icon-badges.demolab.com/github/stars/ManikShrivastav?color=55960c&style=for-the-badge&labelColor=488207&logo=star"
+  />
+</a>
+
+<img
+  alt="profile views"
+  title="Profile views"
+  src="https://komarev.com/ghpvc/?username=ManikShrivastav&color=70a5fd&style=for-the-badge"
+/>
+
+</p>
+
+---
+
+# 🧠 About Me
+
+I'm **Manik Shrivastav**, aka **Alien**.
+
+I enjoy building software across different layers of technology — from
+**low-level programming and Linux to AI, LLMs, web development and hardware.**
+
+My interests include:
+
+- 🤖 Artificial Intelligence & LLMs
+- ⚙️ Systems programming
+- 💻 Software development
+- 🐧 Linux & CLI
+- 🔌 Arduino & hardware
+- 🌐 Web development
+- 🧪 Experimental projects
+- 🚀 Building things from scratch
+
+---
+
+# 🛠️ Tech Stack
+
+## 👨‍💻 Programming & Markup Languages
+
+<p>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Ac">
+  <img alt="C" src="https://custom-icon-badges.demolab.com/badge/C-03599C.svg?logo=c-in-hexagon&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Aassembly">
+  <img alt="Assembly" src="https://img.shields.io/badge/Assembly-525252.svg?logo=assemblyscript&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Ajava">
+  <img alt="Java" src="https://img.shields.io/badge/Java-007396.svg?logo=openjdk&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Aphp">
+  <img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4.svg?logo=php&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Apython">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB.svg?logo=python&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Ajavascript">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?logo=javascript&logoColor=black">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Ahtml">
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white">
+</a>
+
+<a href="https://github.com/search?q=user%3AManikShrivastav+language%3Acss">
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white">
+</a>
+
+</p>
+
+---
+
+## 🤖 AI / ML / LLM
+
+<p>
+
+<img
+  alt="Artificial Intelligence"
+  src="https://img.shields.io/badge/Artificial%20Intelligence-412991.svg?logo=openai&logoColor=white"
+/>
+
+<img
+  alt="LLMs"
+  src="https://img.shields.io/badge/LLMs-412991.svg?logo=openai&logoColor=white"
+/>
+
+<img
+  alt="Python"
+  src="https://img.shields.io/badge/Python-3776AB.svg?logo=python&logoColor=white"
+/>
+
+</p>
+
+---
+
+## 🐧 Systems & Development
+
+<p>
+
+<img
+  alt="Linux"
+  src="https://img.shields.io/badge/Linux-FCC624.svg?logo=linux&logoColor=black"
+/>
+
+<img
+  alt="Git"
+  src="https://img.shields.io/badge/Git-F05032.svg?logo=git&logoColor=white"
+/>
+
+<img
+  alt="GitHub"
+  src="https://img.shields.io/badge/GitHub-181717.svg?logo=github&logoColor=white"
+/>
+
+<img
+  alt="CLI"
+  src="https://img.shields.io/badge/CLI-000000.svg?logo=gnubash&logoColor=white"
+/>
+
+</p>
+
+---
+
+## 🔌 Hardware & Embedded
+
+<p>
+
+<img
+  alt="Arduino"
+  src="https://img.shields.io/badge/Arduino-00979D.svg?logo=arduino&logoColor=white"
+/>
+
+</p>
+
+---
+
+# 📘 Top Projects
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav/dgo">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=dgo&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav/ManikShrivastav.github.io">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=ManikShrivastav.github.io&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav/MousePad">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=MousePad&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav/MuktiNote">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=MuktiNote&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav/RMS">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=RMS&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+<a href="https://github.com/ManikShrivastav/winter">
+  <img
+    width="278"
+    src="https://denvercoder1-github-readme-stats.vercel.app/api/pin/?username=ManikShrivastav&repo=winter&theme=tokyonight&hide_border=true"
+  />
+</a>
+
+</p>
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav?tab=repositories">
+  <img
+    alt="All Repositories"
+    title="View all repositories"
+    src="https://custom-icon-badges.demolab.com/badge/-All%20Repos-70a5fd?style=for-the-badge&logo=repo&logoColor=white"
+  />
+</a>
+
+</p>
+
+---
+
+# 📊 Stats & Activity
+
+## 🔥 Streak Stats
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav">
+  <img
+    alt="Manik's GitHub streak"
+    src="https://streak-stats.demolab.com/?user=ManikShrivastav&theme=tokyonight&hide_border=true&short_numbers=true"
+  />
+</a>
+
+</p>
+
+---
+
+## 💻 GitHub Profile Stats
+
+<p align="center">
+
+<img
+  alt="Manik's GitHub Stats"
+  src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=ManikShrivastav&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true"
+  height="192px"
+/>
+
+<img
+  alt="Manik's Top Languages"
+  src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=ManikShrivastav&langs_count=8&layout=compact&theme=tokyonight&hide_border=true"
+  height="192px"
+/>
+
+</p>
+
+---
+
+## 📈 Contribution Graph
+
+<a href="https://github.com/ManikShrivastav">
+
+<img
+  alt="Manik's Activity Graph"
+  src="https://github-readme-activity-graph.vercel.app/graph/?username=ManikShrivastav&bg_color=1a1b27&color=a9b1d6&line=70a5fd&point=bf91f3&hide_border=true"
+/>
+
+</a>
+
+---
+
+# 🏆 GitHub Achievements
+
+<p align="center">
+
+<img
+  src="https://github-profile-trophy.vercel.app/?username=ManikShrivastav&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1"
+/>
+
+</p>
+
+---
+
+# 🌐 Connect With Me
+
+<p align="center">
+
+<a href="https://github.com/ManikShrivastav">
+  <img
+    src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+  />
+</a>
+
+<a href="mailto:manikshrivastav163@gmail.com">
+  <img
+    src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+  />
+</a>
+
+<a href="https://www.youtube.com/@AlienSutra">
+  <img
+    src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"
+  />
+</a>
+
+</p>
+
+---
+
+<div align="center">
+
+### 👽 **Keep building. Keep breaking limits.**
+
+<img
+  src="https://readme-typing-svg.demolab.com/?lines=Thanks+for+visiting!;Let's+build+something+amazing+together!&font=Fira+Code&center=true&width=600&height=45&color=70a5fd&vCenter=true&pause=1000&size=18&repeat=true"
+/>
+
+</div>
