@@ -1,156 +1,502 @@
-# 👽 Hey, I'm Manik Shrivastav!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manik Shrivastav — AI & Systems Developer, software builder, and low-level programming enthusiast." />
+  <title>Manik Shrivastav — Alien</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #11182b;
+      --card-2: #0e1526;
+      --text: #e8eefc;
+      --muted: #9aa8c7;
+      --accent: #70a5fd;
+      --accent-2: #bf91f3;
+      --border: #24314d;
+    }
 
-### Welcome to Alien's Code — Where Limits Don't Exist
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-I'm **Manik Shrivastav**, also known as **Alien** — the coder who lives in the other dimension of development.
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(112,165,253,.13), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(191,145,243,.10), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-I don't follow trends. I build what *should* be built.
+    a { color: inherit; text-decoration: none; }
 
-<!-- Animated Typing SVG -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Robotics+Engineer;AI+/+ML+/+DL+Enthusiast;Software+Developer;Building+Intelligent+Machines&font=Fira+Code&center=true&width=440&height=45&color=70a5fd&vCenter=true&pause=1000&size=22" />
-</p>
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: auto;
+    }
 
-If it doesn't break boundaries, I'm not interested.
+    header {
+      min-height: 92vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 70px 0;
+    }
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manik-shrivastav-222367236/)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@AlienSutra)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manikshrivastav163@gmail.com)
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(112,165,253,.06);
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
 
-[![Followers](https://custom-icon-badges.demolab.com/github/followers/ManikShrivastav?style=for-the-badge&logo=person-add&label=Followers)](https://github.com/ManikShrivastav?tab=followers)
-[![Stars](https://custom-icon-badges.demolab.com/github/stars/ManikShrivastav?style=for-the-badge&logo=star&label=Stars)](https://github.com/ManikShrivastav?tab=repositories&sort=stargazers)
-![Profile Views](https://komarev.com/ghpvc/?username=ManikShrivastav&style=for-the-badge)
+    h1 {
+      margin: 20px 0 8px;
+      font-size: clamp(3rem, 9vw, 6.5rem);
+      line-height: .95;
+      letter-spacing: -.06em;
+    }
 
----
+    .alias {
+      color: var(--accent);
+      font-weight: 800;
+    }
 
-## ⌨️ What I'm Building
+    .typing {
+      min-height: 34px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin: 24px auto;
+    }
 
-> **Systems. AI. Software. Hardware. Experiments.**
+    .cursor {
+      border-right: 2px solid var(--accent);
+      animation: blink .8s step-end infinite;
+    }
 
-- 🧠 **AI / ML / LLMs** — building systems that can actually do useful things
-- ⚙️ **Systems & low-level programming** — C, Assembly and Linux
-- 🌐 **Web development** — PHP, Java, JavaScript, HTML and CSS
-- 🔌 **Hardware & embedded systems** — Arduino and real-world control
-- 🧪 **Experimental projects** — because the interesting stuff usually starts as an experiment
+    @keyframes blink { 50% { border-color: transparent; } }
 
----
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
 
-## 🛠️ Tech Stack
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-### 👨‍💻 Languages
+    .btn {
+      padding: 11px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: .2s ease;
+      font-weight: 700;
+    }
 
-![C](https://img.shields.io/badge/C-03599C?style=for-the-badge&logo=c&logoColor=white)
-![Assembly](https://img.shields.io/badge/Assembly-525252?style=for-the-badge&logo=gnu&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
-### 🤖 AI / ML / LLM
+    section { padding: 80px 0; }
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![LLMs](https://img.shields.io/badge/LLMs-412991?style=for-the-badge&logo=openai&logoColor=white)
-![AI](https://img.shields.io/badge/AI-FF6F00?style=for-the-badge&logo=googlegemini&logoColor=white)
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 10px;
+      letter-spacing: -.03em;
+    }
 
-### 🐧 Systems & Tools
+    .section-subtitle {
+      color: var(--muted);
+      margin: 0 0 28px;
+    }
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
 
-### 🔌 Hardware
+    .card {
+      background: linear-gradient(145deg, var(--card), var(--card-2));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      height: 100%;
+    }
 
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-![Embedded Systems](https://img.shields.io/badge/Embedded_Systems-333333?style=for-the-badge)
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
 
----
+    .card p { color: var(--muted); }
 
-## 🔥 Featured Projects
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
 
-### 🛸 KainOS
+    .tag {
+      padding: 7px 11px;
+      border-radius: 8px;
+      background: #18233b;
+      border: 1px solid var(--border);
+      color: #cbd7ef;
+      font-size: .9rem;
+    }
 
-**A mobile AI-powered OS built from scratch.**
+    .project {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-### 📝 Pariksha Plugin
+    .project .links {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
 
-**Conduct live exams directly from your site.**
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
 
-### 👻 EOE — Echoes of Engineers
+    .stat {
+      text-align: center;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
 
-**Share student confessions anonymously.**
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--accent);
+    }
 
-### 👽 Alien Sutra
+    .contact {
+      text-align: center;
+      padding: 70px 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, var(--card), var(--card-2));
+    }
 
-**My YouTube channel of code, chaos, and clarity.**
+    footer {
+      text-align: center;
+      padding: 40px 0 60px;
+      color: var(--muted);
+    }
 
-[![Alien Sutra](https://img.shields.io/badge/Watch-Alien_Sutra-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@AlienSutra)
+    .alien {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
----
+    @media (max-width: 800px) {
+      .grid, .stats { grid-template-columns: 1fr; }
+      header { min-height: 80vh; }
+      section { padding: 55px 0; }
+    }
+  </style>
+</head>
 
-## 📊 Live GitHub Stats
+<body>
+  <header>
+    <div class="container">
+      <span class="eyebrow">AI • Systems • Software • Low Level</span>
 
-These cards are **dynamic** — GitHub statistics are fetched from the current public profile instead of being hard-coded.
+      <h1>Hey 👋, I'm <span class="alias">Manik</span></h1>
+      <h2>aka <span class="alias">Alien</span></h2>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ManikShrivastav&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true)
+      <div class="typing">
+        <span id="typingText" class="cursor"></span>
+      </div>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ManikShrivastav&langs_count=8&layout=compact&theme=tokyonight&hide_border=true)
+      <p class="intro">
+        I build software and systems with a strong interest in AI, programming,
+        operating systems, developer tools, hardware, and unconventional ideas.
+        I enjoy going from low-level concepts to practical products that solve
+        real problems.
+      </p>
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=ManikShrivastav&theme=tokyonight&hide_border=true&short_numbers=true)
+      <div class="buttons">
+        <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://www.youtube.com/" target="_blank">YouTube</a>
+        <a class="btn" href="mailto:manikshrivastav163@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph/?username=ManikShrivastav&bg_color=1a1b27&color=a9b1d6&line=70a5fd&point=bf91f3&hide_border=true)
+  <main class="container">
 
----
+    <section id="about">
+      <h2 class="section-title">🧠 About Me</h2>
+      <p class="section-subtitle">
+        A builder-oriented profile based on the information represented in the
+        provided GitHub profile and README reference.
+      </p>
 
-## 📈 Live Contribution Calendar
+      <div class="grid">
+        <article class="card">
+          <h3>⚙️ Systems</h3>
+          <p>
+            Interested in low-level programming, Linux, CLI tools, operating
+            systems, and understanding how software works beneath the surface.
+          </p>
+        </article>
 
-![GitHub Contribution Graph](https://ghchart.rshah.org/ManikShrivastav)
+        <article class="card">
+          <h3>🤖 AI</h3>
+          <p>
+            Exploring Python, LLMs, and AI-driven software with an emphasis on
+            turning ideas into usable systems.
+          </p>
+        </article>
 
----
+        <article class="card">
+          <h3>🚀 Building</h3>
+          <p>
+            I like experimenting, shipping projects, learning by building, and
+            creating technology that reflects my own approach.
+          </p>
+        </article>
+      </div>
+    </section>
 
-## 🏆 GitHub Achievements
+    <section id="stack">
+      <h2 class="section-title">🛠️ Tech Stack</h2>
+      <p class="section-subtitle">Technologies represented in the source profile.</p>
 
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=ManikShrivastav&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8)
+      <div class="grid">
+        <article class="card">
+          <h3>👨‍💻 Languages</h3>
+          <div class="tags">
+            <span class="tag">C</span>
+            <span class="tag">Assembly</span>
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">PHP</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
 
----
+        <article class="card">
+          <h3>🤖 AI / ML</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">AI Engineering</span>
+          </div>
+        </article>
 
-## 📌 GitHub Profile
+        <article class="card">
+          <h3>🐧 Systems & Hardware</h3>
+          <div class="tags">
+            <span class="tag">Linux</span>
+            <span class="tag">Linux CLI</span>
+            <span class="tag">Operating Systems</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Low-Level Programming</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-[![GitHub](https://img.shields.io/badge/View_My_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ManikShrivastav)
+    <section id="projects">
+      <h2 class="section-title">🚀 Featured Projects</h2>
+      <p class="section-subtitle">
+        Projects currently represented on the GitHub profile.
+      </p>
 
-[![Repositories](https://img.shields.io/badge/Repositories-View_All-70a5fd?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ManikShrivastav?tab=repositories)
+      <div class="grid">
+        <article class="card project">
+          <h3>🔧 KainOS</h3>
+          <p>
+            An operating-system-oriented project representing the systems and
+            low-level side of the profile.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
 
-[![Followers](https://img.shields.io/badge/Followers-View-236ad3?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ManikShrivastav?tab=followers)
+        <article class="card project">
+          <h3>📝 Pariksha Plugin</h3>
+          <p>
+            A project from the GitHub profile focused on the Pariksha/plugin
+            ecosystem.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
 
----
+        <article class="card project">
+          <h3>🌐 EOE</h3>
+          <p>
+            One of the highlighted projects represented on the profile.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
 
-## 🚀 Why Am I Here?
+        <article class="card project">
+          <h3>👽 Alien Sutra</h3>
+          <p>
+            A project connected with the Alien identity and creative/technical
+            work represented in the profile.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
 
-I build **crazy sh*t that works**.
+        <article class="card project">
+          <h3>🖱️ MousePad</h3>
+          <p>
+            Another repository represented among the profile's projects.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
 
-No fluff. Just code, rebellion, and results.
+        <article class="card project">
+          <h3>📓 MuktiNote</h3>
+          <p>
+            A repository from the profile's broader project collection.
+          </p>
+          <div class="links">
+            <a href="https://github.com/ManikShrivastav" target="_blank">View on GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-If you need a system designed from scratch — ethically, efficiently, and unconventionally —
+    <section id="github">
+      <h2 class="section-title">📊 GitHub</h2>
+      <p class="section-subtitle">
+        Profile information currently represented on GitHub.
+      </p>
 
-**I'm your alien.**
+      <div class="stats">
+        <div class="stat">
+          <strong>20+</strong>
+          Repositories
+        </div>
+        <div class="stat">
+          <strong>11</strong>
+          Followers
+        </div>
+        <div class="stat">
+          <strong>9</strong>
+          Following
+        </div>
+      </div>
 
----
+      <div class="card" style="margin-top:18px;">
+        <h3>🔗 Explore Everything</h3>
+        <p>
+          Browse repositories, projects, experiments, and contributions directly
+          from the GitHub profile.
+        </p>
+        <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">
+          Open GitHub Profile
+        </a>
+      </div>
+    </section>
 
-## 📬 Contact
+    <section id="contact">
+      <div class="contact">
+        <div class="alien">👽</div>
+        <h2 class="section-title">Let's Build Something Interesting</h2>
+        <p class="section-subtitle">
+          Have an idea, project, experiment, or technical problem?
+          Let's connect.
+        </p>
 
-- 📧 **Email:** [manikshrivastav163@gmail.com](mailto:manikshrivastav163@gmail.com)
-- 💼 **LinkedIn:** [Manik Shrivastav](https://www.linkedin.com/in/manik-shrivastav-222367236/)
-- 🎥 **YouTube:** [Alien Sutra](https://www.youtube.com/@AlienSutra)
-- 🐙 **GitHub:** [ManikShrivastav](https://github.com/ManikShrivastav)
+        <div class="buttons">
+          <a class="btn" href="mailto:manikshrivastav163@gmail.com">Email Me</a>
+          <a class="btn" href="https://github.com/ManikShrivastav" target="_blank">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
 
----
+  </main>
 
-> **"They told me to stay in my lane.**
->
-> **So I built my own highway."**
+  <footer>
+    <div class="container">
+      <p>👽 Built by Manik Shrivastav · aka Alien</p>
+      <p>Code. Experiment. Build. Repeat.</p>
+    </div>
+  </footer>
 
----
+  <script>
+    const roles = [
+      "AI / Software Developer",
+      "Systems & Low-Level Programming Enthusiast",
+      "Python & LLM Explorer",
+      "Linux / CLI Builder",
+      "Hardware & Arduino Enthusiast",
+      "Building unconventional things 👽"
+    ];
 
-### 👽 Keep building. Keep breaking limits.
+    const element = document.getElementById("typingText");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function type() {
+      const role = roles[roleIndex];
+
+      if (!deleting) {
+        element.textContent = role.slice(0, charIndex++);
+        if (charIndex > role.length) {
+          deleting = true;
+          setTimeout(type, 1300);
+          return;
+        }
+      } else {
+        element.textContent = role.slice(0, charIndex--);
+        if (charIndex < 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          charIndex = 0;
+        }
+      }
+
+      setTimeout(type, deleting ? 45 : 75);
+    }
+
+    type();
+  </script>
+</body>
+</html>
