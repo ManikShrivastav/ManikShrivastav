@@ -6,6 +6,11 @@ I'm **Manik Shrivastav**, also known as **Alien** — the coder who lives in the
 
 I don't follow trends. I build what *should* be built.
 
+<!-- Animated Typing SVG -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Robotics+Engineer;AI+/+ML+/+DL+Enthusiast;Software+Developer;Building+Intelligent+Machines&font=Fira+Code&center=true&width=440&height=45&color=70a5fd&vCenter=true&pause=1000&size=22" />
+</p>
+
 If it doesn't break boundaries, I'm not interested.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/manik-shrivastav-222367236/)
